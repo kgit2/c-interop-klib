@@ -3,11 +3,16 @@ import kotlinx.cinterop.CPointed
 import kotlinx.cinterop.CPointer
 
 abstract class Base<T: CPointed> {
-    val arena = Arena()
+    var arena: Arena? = null
 
-    abstract val handler: CPointer<T>
+    abstract fun handler(): CPointer<T>
 
     open fun free() {
-        arena.clear()
+        if (arena == null) {
+            throw IllegalStateException("Arena is null")
+        } else {
+            arena?.clear()
+            arena = null
+        }
     }
 }

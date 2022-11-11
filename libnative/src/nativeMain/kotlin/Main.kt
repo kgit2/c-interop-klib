@@ -1,3 +1,3 @@
 fun main() {
-    println(createUser("John", "Doe", 42))
+    println(createUserForKClass("John", "Doe", 42))
 }

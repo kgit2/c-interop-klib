@@ -1,4 +1,4 @@
 headers = api.h
 staticLibraries = libapi.a
-compilerOpts = -I/Users/bppleman/IdeaProjects/c-interop-klib/libapi/cmake-build-debug/include
-libraryPaths = /Users/bppleman/IdeaProjects/c-interop-klib/libapi/cmake-build-debug/lib
+compilerOpts = -I/Users/bppleman/Github/c-interop-klib/libapi/cmake-build-debug/include
+libraryPaths = /Users/bppleman/Github/c-interop-klib/libapi/cmake-build-debug/lib

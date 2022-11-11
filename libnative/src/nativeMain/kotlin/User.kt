@@ -32,20 +32,6 @@ fun getUserList(size: CPointer<IntVar>) {
 
 }
 
-// fun createUser(firstName: String, lastName: String, age: Int): CPointer<api_user> {
-//     val arena = Arena()
-//     val apiName = arena.allocPointerTo<api_name>()
-//     val name = Name(apiName.value!!, arena)
-//     name.first = firstName
-//     name.last = lastName
-//     val apiUser = arena.allocPointerTo<api_user>()
-//     val user = User(apiUser.value!!, arena)
-//     user.name = name
-//     user.age = age
-//     userList.add(user)
-//     return user.handler
-// }
-
 fun createUser(firstName: String, lastName: String, age: Int): CPointer<api_user> {
     return createUserForKClass(firstName, lastName, age).handler
 }
@@ -54,6 +40,5 @@ fun createUserForKClass(firstName: String, lastName: String, age: Int): User {
     val name = Name(firstName, lastName)
     val user = User(name, age)
     userList.add(user)
-    println(user)
     return user
 }

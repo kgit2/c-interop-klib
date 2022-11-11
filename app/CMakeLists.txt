@@ -11,8 +11,8 @@ add_library(libnative SHARED IMPORTED)
 
 add_library(libapi STATIC IMPORTED)
 
-set_target_properties(libnative PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/../libdemo/build/bin/native/debugShared/libnative.dylib)
+set_target_properties(libnative PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/../libnative/build/bin/native/debugShared/libnative.dylib)
 
 set_target_properties(libapi PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/../libapi/cmake-build-debug/lib/libapi.a)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../libdemo/build/bin/native/debugShared ${CMAKE_CURRENT_SOURCE_DIR}/../libapi/cmake-build-debug/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../libnative/build/bin/native/debugShared ${CMAKE_CURRENT_SOURCE_DIR}/../libapi/cmake-build-debug/include)

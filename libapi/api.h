@@ -17,4 +17,6 @@ typedef struct api_user {
     int age;
 } api_user;
 
+void get_strings(const char **strings, int length);
+
 #endif //API_API_H
